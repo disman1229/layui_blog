@@ -8,38 +8,49 @@
     <title>Blog</title>
     <link rel="stylesheet" href="{% static 'base/css/layui.css' %}">
     <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="layui-container">
-            <a href="/" class="logo">Disman</a>
-            <ul class="layui-nav" lay-filter="">
-                <li class="layui-nav-item"><a href="">最新活动</a></li>
-                <li class="layui-nav-item layui-this"><a href="">产品</a></li>
-                <li class="layui-nav-item"><a href="">大数据</a></li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;">解决方案</a>
-                    <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                        <dd><a href="">移动模块</a></dd>
-                        <dd><a href="">后台模版</a></dd>
-                        <dd><a href="">电商平台</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item"><a href="">社区</a></li>
-            </ul>
-        </div>
+        <div class="layui-container dis-header">
+            <div class="dis-header-brand">
+                <span class="dis-header-brand-title">
+                    <a href="/">Disman</a>
+                </span>
+                <span class="dis-header-brand-small"> | 蹉跎中生存... </span>
+            </div>
+            <div class="dis-header-right">
+                <ul class="layui-nav dis-nav layui-hide-xs">
+                    <li class="layui-nav-item"><a href="">最新活动</a></li>
+                    <li class="layui-nav-item layui-this"><a href="">产品</a></li>
+                    <li class="layui-nav-item"><a href="">大数据</a></li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">解决方案</a>
+                        <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                            <dd><a href="">移动模块</a></dd>
+                            <dd><a href="">后台模版</a></dd>
+                            <dd><a href="">电商平台</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a href="javascript:;">社区</a>
+                            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                            <dd><a href="">移动模块</a></dd>
+                            <dd><a href="">后台模版</a></dd>
+                            <dd><a href="">电商平台</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="dis-header-btn">
+                    <a href="https://github.com/disman1229/blog/" target="_blank" id="dis-github"><i
+                            class="fa fa-github-alt"></i></a>
+                    <a href="#" id="dis-search"><i class="fa fa-search"></i></a>
+                </div>
+            </div>
+{#        </div>#}
     </header>
 
-
-    <script>
-        //注意：导航 依赖 element 模块，否则无法进行功能性操作
-        layui.use('element', function () {
-            var element = layui.element;
-
-            //…
-        });
-    </script>
-</body>
     <script src="{% static 'base/js/layui.all.js' %}"></script>
-    <script src="{% static 'base/js/layui.js' %}"></script>
+</body>
+
+{#    <script src="{% static 'base/js/layui.js' %}"></script>#}
 </html>

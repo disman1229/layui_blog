@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog</title>
-    <link rel="stylesheet" href="{% static 'base/css/layui.css' %}">
+    <link rel="stylesheet" href="{% static 'layui/css/layui.css' %}">
     <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -46,11 +46,52 @@
                     <a href="#" id="dis-search"><i class="fa fa-search"></i></a>
                 </div>
             </div>
-{#        </div>#}
+        </div>
+        <div id="loading"></div>
     </header>
 
-    <script src="{% static 'base/js/layui.all.js' %}"></script>
+    <div class="layui-container">
+        <div class="layui-row">
+            <div class="layui-col-md9">
+                <ul class="dis-article-list">
+                    <li class="">
+                        <a href="#" class="dis-article-list-img">
+                            <img src="https://www.vipbic.com/uploads/20190314/8a1065cec20b4c93a9167ac125f56356.png"
+                                 alt="再聊移动端页面的适配">
+                        </a>
+                        <h2 class="dis-article-title">
+                            <a href="#">再聊移动端页面的适配</a>
+                        </h2>
+                        <p>
+                            <span><a href="#"><img
+                                    src="https://www.vipbic.com/uploads/20180911/12c512a110a9965e2f98a2de591e1090.jpg"
+                                    alt="yuzu柚子茶">yuzu柚子茶</a></span>
+                            <span>2019-03-14 09:02:15</span>
+                            <span class="dis-article-list-i">
+                                <i class="layui-icon" title="点赞" style="font-size: 18px;position: relative;top: 2px;"></i> 10
+                                <i class="fa fa-eye" title="人气" style="font-size: 20px;position: relative;top: 2px;"></i>178</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="layui-col-md3">
+                你的内容 3/12
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'layui/layui.all.js' %}"></script>
+
+    <script>
+        //由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+        !function () {
+            var $ = layui.jquery,
+                t = layui.util;
+            $(window).load(function () {
+                $("#loading").fadeOut(500);
+            });
+        }();
+    </script>
 </body>
 
-{#    <script src="{% static 'base/js/layui.js' %}"></script>#}
 </html>
